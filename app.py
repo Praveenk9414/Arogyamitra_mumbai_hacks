@@ -1,4 +1,5 @@
 # app.py
+import streamlit as st
 import gradio as gr
 from tools.translate import translate_report_input
 from tools.validate_procedure import validate_procedure_tool
@@ -74,8 +75,8 @@ def price_from_bill_text(text):
 def price_manual(procedure, city):
     return get_quotes(procedure, city)["human_text"]
 
-with gr.Blocks(title="Arogyamitra - Local LLM + File Upload Demo") as demo:
-    gr.Markdown("# Arogyamitra — Upload-driven demo")
+with gr.Blocks(title="Arogyamitra") as demo:
+    gr.Markdown("# Arogyamitra")
 
     with gr.Tab("Translate Report (User)"):
         gr.Markdown("Upload a report PDF (scanned selectable PDF) or paste report text.")
@@ -141,3 +142,5 @@ with gr.Blocks(title="Arogyamitra - Local LLM + File Upload Demo") as demo:
 
 if __name__ == "__main__":
     demo.launch(share=False)
+    # st.title("Arogyamitra")
+    # st.components.v1.iframe(demo.local_url, height=500)

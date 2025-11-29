@@ -4,7 +4,6 @@ Audit a hospital bill using:
 - rule-based checks (duplicates, large charges)
 - cross-check against hospital expected prices (data/hospitals.json)
 - billing rules from data/billing_rules.json
-- optional local LLM to draft dispute email (calls llm.safe_llm_summary)
 """
 
 import os
