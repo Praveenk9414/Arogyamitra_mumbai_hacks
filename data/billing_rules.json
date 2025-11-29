@@ -1,0 +1,6 @@
+{
+  "overcharge_pct_threshold": 25,
+  "large_single_charge_threshold": 20000,
+  "duplicate_line_match_tolerance_chars": 6,
+  "allowed_misc_fees": ["consultation fee", "oxygen charge", "nursing charges"]
+}

@@ -1,0 +1,202 @@
+{
+  "version": "1.0",
+  "name": "general_medical_guidelines_for_arogyamitra",
+  "description": "General clinical and procedural guideline snippets used by the Procedure Validator and Translate tools. Not a substitute for clinical judgment — intended for triage / heuristic checks in the hackathon prototype.",
+  "procedures": {
+    "appendectomy": {
+      "display_name": "Appendectomy",
+      "codes": ["PROC_APPEND_001"],
+      "common_indications": [
+        "Imaging consistent with appendicitis (enlarged appendix, wall thickening, periappendiceal fat stranding)",
+        "Clinical signs: migrating abdominal pain, right lower quadrant tenderness, fever, raised WBC/CRP",
+        "Perforation or free intraperitoneal air on imaging",
+        "Recurrent appendicitis episodes"
+      ],
+      "relative_indications": [
+        "Early/uncertain appendicitis with stable clinical exam — consider antibiotic trial and observation",
+        "Small appendiceal phlegmon or abscess managed conservatively or by percutaneous drainage followed by interval appendectomy"
+      ],
+      "conservative_alternatives": [
+        "Short course of intravenous antibiotics and observation",
+        "Percutaneous drainage (if abscess) plus antibiotics",
+        "Repeat imaging and clinical reassessment within 24–48 hours"
+      ],
+      "red_flags": [
+        "Free intraperitoneal air (perforation)",
+        "Generalized peritonitis",
+        "Hemodynamic instability"
+      ],
+      "notes": "If imaging *and* clinical findings concordant → surgery commonly recommended. If imaging ambiguous and patient stable, conservative approach may be reasonable."
+    },
+    "cholecystectomy": {
+      "display_name": "Cholecystectomy",
+      "codes": ["PROC_CHOL_001"],
+      "common_indications": [
+        "Symptomatic cholelithiasis with recurrent biliary colic",
+        "Acute cholecystitis on imaging (gallbladder wall thickening, pericholecystic fluid, sonographic Murphy's sign)",
+        "Choledocholithiasis with obstructive jaundice (after ERCP planning)"
+      ],
+      "conservative_alternatives": [
+        "Antibiotics and observation for early or mild acute cholecystitis",
+        "ERCP for common bile duct stones before definitive cholecystectomy"
+      ],
+      "red_flags": [
+        "Gangrenous cholecystitis",
+        "Perforation with peritonitis",
+        "Sepsis / hemodynamic instability"
+      ],
+      "notes": "Timing may be urgent in complicated cholecystitis; uncomplicated symptomatic gallstones may be elective."
+    },
+    "cataract_surgery": {
+      "display_name": "Cataract Surgery (Phaco + IOL)",
+      "codes": ["PROC_CAT_001"],
+      "common_indications": [
+        "Visually significant lens opacity affecting activities of daily living (driving, reading)",
+        "Best-corrected visual acuity reduced and visually symptomatic patient consents to surgery"
+      ],
+      "conservative_alternatives": [
+        "Spectacle correction if visual impairment is mild and not function-limiting",
+        "Observation and regular follow-up"
+      ],
+      "red_flags": [
+        "No absolute red flags — surgery elective unless complicated by other ocular emergencies"
+      ],
+      "notes": "Decision is largely patient-function driven; confirm ocular fitness pre-op."
+    },
+    "partial_medial_meniscus_tear": {
+      "display_name": "Partial medial meniscus tear",
+      "codes": ["PROC_MEN_001"],
+      "common_indications": [
+        "Mechanical symptoms (locking, catching) or persistent pain after conservative therapy",
+        "Large displaced tear on MRI in young, active patients"
+      ],
+      "conservative_alternatives": [
+        "Physiotherapy and activity modification",
+        "Anti-inflammatory medications and targeted rehab",
+        "Intra-articular steroid injection in select patients"
+      ],
+      "red_flags": [
+        "Irreducible mechanical locking",
+        "Concurrent ligamentous instability requiring surgical correction"
+      ],
+      "notes": "Most partial tears initially managed conservatively unless mechanical symptoms persist."
+    },
+    "hernia_repair": {
+      "display_name": "Hernia repair (inguinal/ventral)",
+      "codes": ["PROC_HERN_001"],
+      "common_indications": [
+        "Symptomatic hernia causing pain or risk of strangulation",
+        "Incarcerated hernia (urgent repair)"
+      ],
+      "conservative_alternatives": [
+        "Watchful waiting for small asymptomatic inguinal hernias in low-risk patients",
+        "Truss/band support only as temporary measure"
+      ],
+      "red_flags": [
+        "Signs of strangulation (severe pain, erythema, systemic signs)",
+        "Obstructive symptoms"
+      ],
+      "notes": "Emergent intervention required if strangulation or incarceration suspected."
+    }
+  },
+  "lab_tests": {
+    "haemoglobin": {
+      "display_name": "Haemoglobin",
+      "unit": "gm/dl",
+      "normal_range_male": [13.0, 18.0],
+      "normal_range_female": [12.0, 16.0],
+      "urgent_threshold": 8.0,
+      "interpretation_notes": "Values below urgent_threshold typically need prompt clinical attention; mild reductions require workup (iron studies, indices)."
+    },
+    "wbc_total": {
+      "display_name": "Total WBC",
+      "unit": "/cmm",
+      "normal_range": [4500, 11000],
+      "neutropenia_threshold": 1000,
+      "leukocytosis_threshold": 11000,
+      "interpretation_notes": "Very low ANC or neutropenia with fever is urgent; leukocytosis suggests infection/inflammation."
+    },
+    "platelet_count": {
+      "display_name": "Platelet Count",
+      "unit": "/cmm",
+      "normal_range": [150000, 450000],
+      "urgent_threshold": 50000,
+      "interpretation_notes": "Platelets below urgent_threshold need urgent review if bleeding present; mild thrombocytopenia often observed and followed up."
+    },
+    "crp": {
+      "display_name": "C-reactive protein",
+      "unit": "mg/L",
+      "normal_range": [0, 5],
+      "interpretation_notes": "Rises with inflammation or infection; use trend with clinical context."
+    },
+    "bilirubin_total": {
+      "display_name": "Total Bilirubin",
+      "unit": "mg/dl",
+      "normal_range": [0.1, 1.2],
+      "urgent_threshold": 3.0,
+      "interpretation_notes": "Marked hyperbilirubinemia (>3 mg/dl) may need urgent hepatology review."
+    }
+  },
+  "imaging_findings": {
+    "urgent_keywords": [
+      "free air",
+      "free intraperitoneal air",
+      "massive hemoperitoneum",
+      "active extravasation",
+      "perforation",
+      "large haemorrhage",
+      "cord compression",
+      "pneumothorax with tension",
+      "airway compromise"
+    ],
+    "high_priority_keywords": [
+      "abscess",
+      "large effusion",
+      "obstructive uropathy",
+      "significant obstruction",
+      "major vessel aneurysm",
+      "displaced fracture"
+    ],
+    "surgery_suggestive_keywords": {
+      "appendectomy": ["appendicitis", "enlarged appendix", "periappendiceal fat stranding", "appendicular perforation"],
+      "cholecystectomy": ["acute cholecystitis", "pericholecystic fluid", "gangrenous cholecystitis"],
+      "meniscus": ["meniscal tear", "bucket handle", "displaced tear"],
+      "hernia_repair": ["incarcerated hernia", "strangulated hernia", "bowel obstruction"],
+      "cataract_surgery": ["lenticular opacity", "mature cataract", "visual axis opacity"]
+    }
+  },
+  "billing_guidance": {
+    "package_components": [
+      "operation theatre fees",
+      "surgeon fees",
+      "anesthesia fees",
+      "prosthesis / implant costs (if applicable)",
+      "hospital stay (room & board)",
+      "investigations",
+      "medications",
+      "consumables"
+    ],
+    "price_check_tips": [
+      "Compare billed total with expected package price from partner hospital dataset.",
+      "Verify presence of duplicate line-items.",
+      "Flag single-line items greater than 'large_single_charge_threshold' in billing_rules.json."
+    ]
+  },
+  "templates": {
+    "procedure_validator_prompt_template": "Given the following report excerpt and the standard indications for {procedure_name}, decide whether the procedure is: Required / Possibly avoidable / Not recommended. Provide short rationale and 2 alternatives if appropriate.\n\nReport excerpt:\n{report_excerpt}\n\nReturn EXACTLY in this format:\nNecessity: <Required | Possibly avoidable | Not recommended>\nRationale: <one or two sentences>\nAlternatives:\n- <alternative 1>\n- <alternative 2>",
+    "translate_impression_template": "Summary: {summary_sentence}\nKey Findings: {key_findings}\nNext Steps: {next_steps}\nUrgency: {urgency}"
+  },
+  "usage_notes": {
+    "how_to_use_in_procedure_validator": [
+      "Load this JSON at startup or on-demand in validate_procedure.py.",
+      "When a report is uploaded, extract the text and numeric values (labs) and search for imaging keywords.",
+      "If the report contains any 'urgent_keywords' then mark as URGENT and escalate.",
+      "To validate a recommended procedure: compare the report text against 'procedures[<proc_key>].common_indications' and 'imaging_findings.surgery_suggestive_keywords'.",
+      "If multiple strong indications (eg. imaging keyword + supportive lab + clinical mention) exist, label 'Required'. If ambiguous or only clinical suspicion without imaging confirmation, label 'Possibly avoidable'."
+    ],
+    "security_and_disclaimer": [
+      "These are heuristic rules for prototype/demo use only. They are NOT medical advice.",
+      "Always show results as 'recommendation' and encourage user to consult treating physician."
+    ]
+  }
+}

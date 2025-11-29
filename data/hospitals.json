@@ -1,0 +1,56 @@
+[
+  {
+    "id": "apollo_bengaluru",
+    "name": "Apollo Hospital Bengaluru",
+    "city": "Bangalore",
+    "procedures": {
+      "appendectomy": {
+        "code": "PROC_APPEND_001",
+        "description": "Laparoscopic appendectomy (all inclusive)",
+        "expected_price": 45000,
+        "breakdown": {
+          "surgery": 30000,
+          "stay": 10000,
+          "meds": 5000
+        }
+      },
+      "cataract_surgery": {
+        "code": "PROC_CAT_010",
+        "description": "Phaco+IOL",
+        "expected_price": 25000,
+        "breakdown": {
+          "surgery": 15000,
+          "lens": 7000,
+          "fees": 3000
+        }
+      }
+    }
+  },
+  {
+    "id": "fortis_bengaluru",
+    "name": "Fortis Healthcare Bengaluru",
+    "city": "Bangalore",
+    "procedures": {
+      "appendectomy": {
+        "code": "PROC_APPEND_002",
+        "description": "Appendectomy - standard package",
+        "expected_price": 42000,
+        "breakdown": {
+          "surgery": 28000,
+          "stay": 11000,
+          "meds": 3000
+        }
+      },
+      "cataract_surgery": {
+        "code": "PROC_CAT_011",
+        "description": "Cataract with foldable IOL",
+        "expected_price": 27000,
+        "breakdown": {
+          "surgery": 16000,
+          "lens": 8000,
+          "fees": 3000
+        }
+      }
+    }
+  }
+]
